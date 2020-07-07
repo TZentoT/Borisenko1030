@@ -1,0 +1,87 @@
+<div class="container-fluid">
+    <ng-container [formGroup]="profile">
+        <div class="row mt-4">
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="id">Имя</label>
+                    <input type="text" class="form-control" placeholder="Имя" formControlName="name" id="name"/>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" class="form-control" placeholder="Фамилия" formControlName="surname" id="surname"/>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" class="form-control" placeholder="Отчество" formControlName="patronymic" id="patronymic" />
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="email">Почта</label>
+                    <input type="text" class="form-control" mask="A*@A*.S*" [dropSpecialCharacters]="false" [dropSpecialCharacters]="false"
+                        placeholder="test@gmail.com" formControlName="email" id="email" />
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="text" class="form-control" mask="+0(000) 000-0000" [dropSpecialCharacters]="false"
+                        formControlName="phone" id="phone" />
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="birthday">Дата рождения</label>
+                    <input type="date" class="form-control" min="1950-01-01" max="2002-12-31"
+                        formControlName="dob" id="birthday" >
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="type">Группа</label>
+                    <select class="custom-select" formControlName="groupNum" id="groupNum">
+                        <option [ngValue]="studentGroup.SAPR">САПР</option>
+                        <option [ngValue]="studentGroup.Web">Веб-дизайн</option>
+                        <option [ngValue]="studentGroup.IKT">Информационные технологии</option>
+                        <option [ngValue]="studentGroup.Design">Дизайн</option>
+                        <option [ngValue]="studentGroup.Journalism">Журналистика</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="id">Номер</label>
+                    <input type="number" class="form-control" placeholder="id" formControlName="id" id="id">
+                </div>
+            </div>
+            <div class="col-2">
+                    <div class="form-group">
+                        <label for="type">Направление</label>
+                        <select class="custom-select" formControlName="major" id="major">
+                            <option [ngValue]="studentMajor.IT">Информатика и информационные технологии</option>
+                            <option [ngValue]="studentMajor.design">Дизайн</option>
+                            <option [ngValue]="studentMajor.typography">Печатное дело</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        <div class="row mt-4">
+            <div class="col-1">
+                <button class="btn btn-outline-success" [disabled]="profile.invalid" *ngIf="id == null" (click)="onAddWorker()">Добавить</button>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-outline-primary" [disabled]="profile.invalid" *ngIf="id != null" (click)="changeData()">Сохранить</button>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-outline-danger" *ngIf="id != null" (click)="deleteData()">Удалить</button>
+            </div>
+        </div>
+
+    </ng-container>
+</div>

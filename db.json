@@ -1,0 +1,92 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "surname": "Иванов",
+      "name": "Иван",
+      "patronymic": "Иваныч",
+      "phone": "+4(902) 481-8540",
+      "email": "aaaa@gmail.com",
+      "dob": "1989-08-01",
+      "groupNum": 0,
+      "major": 10
+    },
+    {
+      "id": 3,
+      "name": "Петр2",
+      "surname": "Петров",
+      "patronymic": "Петрович",
+      "phone": "+8(971) 802-1125",
+      "email": "test@yandex.ru",
+      "birthday": "1988-12-10",
+      "groupNum": 2,
+      "major": 10
+    },
+    {
+      "id": 4,
+      "name": "Александр",
+      "surname": "Александров",
+      "patronymic": "Александрович",
+      "phone": "+7(902) 782-1258",
+      "email": "smth@yandex.ru",
+      "dob": "1985-10-10",
+      "groupNum": 2,
+      "major": 10
+    },
+    {
+      "id": 5,
+      "name": "Павел",
+      "surname": "Иванов2",
+      "patronymic": "Геннадиевич",
+      "phone": "+5(652) 359-5236",
+      "email": "dsadasd@dfdf.com",
+      "birthday": "2000-05-05",
+      "groupNum": 0,
+      "major": 10
+    },
+    {
+      "id": 6,
+      "name": "Владимир",
+      "surname": "Горев",
+      "patronymic": "Алексеевич",
+      "phone": "+1(456) 595-5329",
+      "email": "usc5hFx33n@gmail.com",
+      "dob": "1988-02-04",
+      "groupNum": 3,
+      "major": 11
+    },
+    {
+      "id": 7,
+      "name": "Егор",
+      "surname": "Глускин",
+      "patronymic": "Левович",
+      "phone": "+5(689) 774-5342",
+      "email": "r43454356@gma.com",
+      "dob": "2000-05-04",
+      "groupNum": 3,
+      "major": 11
+    },
+    {
+      "id": 9,
+      "name": "Лев",
+      "surname": "Суботин",
+      "patronymic": "Александрович",
+      "phone": "+6(587) 956-3442",
+      "email": "usc5hFx33n@gmail.com",
+      "dob": "1996-5-27",
+      "groupNum": 4,
+      "major": 12
+    },
+    {
+      "id": 11,
+      "name": "Алексей",
+      "surname": "Сидроов",
+      "patronymic": "Сидорович",
+      "phone": "+5(689) 774-5342",
+      "email": "uc00510144@yandex.ru",
+      "dob": "2002-12-03",
+      "groupNum": 0,
+      "major": 10
+    }
+  ]
+}

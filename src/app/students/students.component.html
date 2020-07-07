@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h5>Список студентов</h5>
+        </div>
+        <br>
+        <div class="col-2 mb-3 ">
+            <h5 class="mt-4">Доступные фильтры</h5>
+           <label for="onGroupSearch">Основные направления</label>
+            <select class="custom-select" [(ngModel)]="onMajorSearch" id="onGroupSearch">
+                <option [ngValue]='100' selected>Все</option>
+                <option [ngValue]='studentMajor.IT'>Информатика и информационные технологии</option>
+                <option [ngValue]='studentMajor.design'>Дизайн</option>
+                <option [ngValue]='studentMajor.typography'>Печатное дело</option>
+            </select>
+            <label for="onGroupSearch">Группы</label>
+            <select class="custom-select" id="onGroupSearch" [(ngModel)]="onGroupSearch">
+                <option [ngValue]='100'>Все</option>
+                <option [ngValue]="studentGroup.SAPR">САПР</option>
+                <option [ngValue]="studentGroup.Web">Веб-дизайн</option>
+                <option [ngValue]="studentGroup.IKT">Информационные технологии</option>
+                <option [ngValue]="studentGroup.Design">Дизайн</option>
+                <option [ngValue]="studentGroup.Journalism">Журналистика</option>
+            </select>
+        </div>
+        <div class="col-2 mb-13">
+            
+        </div>
+        <div class="col-6 mb-3">
+            <h5 class="mt-4"> Добавить</h5>
+            <button class="btn btn-outline-success btn-sm" (click)="onAddWorker()">Добавить студента</button>
+        </div>
+        <br>
+        <div class="col-12 mt-4">
+            <app-students-list
+            [title]="'Информатика'"
+            [students]= "getByMajor(studentMajor.IT) | search: onMajorSearch "
+            [onGroupSearch]='onGroupSearch'
+            (deleteWorker)="onDeleteWorker($event)"
+            ></app-students-list>
+            
+        </div>
+        <div class="col-12 mt-4">
+            <app-students-list
+            [title]="'Дизайн'"
+            [students]= "getByMajor(studentMajor.design) | search: onMajorSearch "
+            (deleteWorker)="onDeleteWorker($event)"
+            [onGroupSearch]='onGroupSearch'
+            ></app-students-list>
+        </div>
+        <div class="col-12 mt-4">
+            <app-students-list
+            [title]="'Печатное дело'"
+            [students]= "getByMajor(studentMajor.typography) | search: onMajorSearch "
+            (deleteWorker)="onDeleteWorker($event)"
+            [onGroupSearch]='onGroupSearch'
+            ></app-students-list>
+        </div>
+    </div>
+</div>

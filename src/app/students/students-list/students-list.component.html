@@ -1,0 +1,32 @@
+<div class="container-fluid" *ngIf="students.length > 0">
+    <div class="row">
+        <div class="col-12">
+            <h5>{{ title}}</h5>
+        </div>
+        <table class="table" >
+            <thead>
+                <tr>
+                  <th scope="col" [style.width]=" '10%'" >#</th>
+                  <th scope="col" width="200">Фамилия</th>
+                  <th scope="col" width="200">Имя Отчество</th>
+                  <th scope="col" width="200">Группа</th>
+                  <th scope="col" [style.width]=" '150px'"></th>
+                </tr>
+              </thead>
+              <tbody >
+                    <tr *ngFor="let student of students | sort : onGroupSearch">
+                        <td scope="row">{{ student.id }}</td>
+                        <td scope="row">{{ student.surname }}</td>
+                        <td scope="row">{{ student.name | paraph: student.patronymic}}</td>
+                        <td scope="row">{{ student.groupNum | groupPipe }}</td>
+                        <td>
+                            <button class="btn btn-outline-info btn-sm" (click)="onLinkProfile(student.id)">Редактировать</button> 
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-danger btn-sm" (click)="onDeleteWorker(student.id)">Удалить</button>
+                        </td>
+                    </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
